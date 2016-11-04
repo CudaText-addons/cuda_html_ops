@@ -1,0 +1,22 @@
+[info]
+title=HTML Ops
+desc=Commands to add HTML tags to selection
+type=cudatext-plugin
+subdir=cuda_html_ops
+homepage=
+
+[item1]
+section=commands
+caption=HTML Ops\Tag "b"
+method=do_b
+
+[item2]
+section=commands
+caption=HTML Ops\Tag "i"
+method=do_i
+
+[item3]
+section=commands
+caption=HTML Ops\Tag "u"
+method=do_u
+
