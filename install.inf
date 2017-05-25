@@ -7,16 +7,21 @@ homepage=
 
 [item1]
 section=commands
-caption=HTML Ops\Tag "b"
+caption=HTML Ops\Wrap selection in <b>
 method=do_b
 
 [item2]
 section=commands
-caption=HTML Ops\Tag "i"
+caption=HTML Ops\Wrap selection in <i>
 method=do_i
 
 [item3]
 section=commands
-caption=HTML Ops\Tag "u"
+caption=HTML Ops\Wrap selection in <u>
 method=do_u
+
+[item20]
+section=commands
+caption=HTML Ops\Add new tag, or wrap selection in tag
+method=tag_new_or_wrap
 
