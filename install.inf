@@ -1,9 +1,9 @@
 [info]
 title=HTML Ops
-desc=Commands to add HTML tags to selection
+desc=Commands to work with HTML tags
 type=cudatext-plugin
 subdir=cuda_html_ops
-homepage=
+homepage=https://github.com/cudatext-addons/cuda_html_ops
 
 [item1]
 section=commands
