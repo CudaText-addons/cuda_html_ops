@@ -25,3 +25,7 @@ section=commands
 caption=HTML Ops\Add new tag, or wrap selection in tag
 method=tag_new_or_wrap
 
+[item30]
+section=commands
+caption=HTML Ops\Convert selection px<->rem
+method=convert_px_rem

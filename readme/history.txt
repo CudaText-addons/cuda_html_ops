@@ -1,4 +1,7 @@
 
+2017.06.06
++ command "Convert selection px<->rem"
+
 2017.05.25
 + command, to do the same as Sublime Text does on hotkey Alt+Shift+W:
     on selection: wrap selection with <p></p> and place 2 selections to rename tag
