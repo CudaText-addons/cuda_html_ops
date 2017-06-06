@@ -1,6 +1,6 @@
 [info]
 title=HTML Ops
-desc=Commands to work with HTML tags
+desc=Commands to work with HTML/CSS
 type=cudatext-plugin
 subdir=cuda_html_ops
 homepage=https://github.com/cudatext-addons/cuda_html_ops
