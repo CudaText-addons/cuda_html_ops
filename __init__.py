@@ -1,4 +1,5 @@
 from .html_ops import *
+from .img_insert import *
 
 class Command:
     def do_b(self):
@@ -21,3 +22,6 @@ class Command:
 
     def preview_new_window(self):
         do_preview_browser(True)
+
+    def insert_image_info(self):
+        do_insert_image_info()

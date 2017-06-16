@@ -49,3 +49,8 @@ method=tag_new_or_wrap
 section=commands
 caption=HTML Ops\Convert selection px<->rem
 method=convert_px_rem
+
+[item40]
+section=commands
+caption=HTML Ops\Insert <img> tag (or CSS lines) with info about selected picture
+method=insert_image_info

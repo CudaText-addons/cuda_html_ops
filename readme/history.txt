@@ -1,6 +1,7 @@
 
-2017.06.16
-+ function of plugin HTML Preview moved here, as 2 commands
+2017.06.17
++ function of plugin "Insert Image Tag" moved here
++ function of plugin "HTML Preview" moved here, as 2 commands
 
 2017.06.06
 + command "Convert selection px<->rem"
