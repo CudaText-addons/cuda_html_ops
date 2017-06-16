@@ -42,7 +42,7 @@ method=-
 
 [item20]
 section=commands
-caption=HTML Ops\Add new tag, or wrap selection in tag
+caption=HTML Ops\Add new tag, or wrap selection in tag (Sublime like)
 method=tag_new_or_wrap
 
 [item30]
