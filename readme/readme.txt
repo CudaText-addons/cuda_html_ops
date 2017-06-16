@@ -1,8 +1,10 @@
 plugin for CudaText.
 gives commands for HTML/CSS work (lexer name can be any).
 
-* command to open current HTML text (only selection if text is selected) in current web browser.
-  it is the function of plugin HTML Preview. 2 commands: open new tab or window.
+* commands to open current HTML text in current web browser. 2 commands: open new tab or window.
+  it is the function of plugin HTML Preview. 
+  for selection: only selection previewed, and a temp-file is created, in the same folder as original
+  (_cudatext_preview.html).
 
 * commands to wrap selection in HTML tag: <b>, <i>, <u>.
   for ex, "text" ->  "<b>text</b>"
