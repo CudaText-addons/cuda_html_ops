@@ -7,18 +7,38 @@ homepage=https://github.com/cudatext-addons/cuda_html_ops
 
 [item1]
 section=commands
+caption=HTML Ops\Preview HTML in browser, new tab
+method=preview_new_tab
+
+[item2]
+section=commands
+caption=HTML Ops\Preview HTML in browser, new window
+method=preview_new_window
+
+[item9]
+section=commands
+caption=HTML Ops\-
+method=-
+
+[item10]
+section=commands
 caption=HTML Ops\Wrap selection in <b>
 method=do_b
 
-[item2]
+[item11]
 section=commands
 caption=HTML Ops\Wrap selection in <i>
 method=do_i
 
-[item3]
+[item12]
 section=commands
 caption=HTML Ops\Wrap selection in <u>
 method=do_u
+
+[item19]
+section=commands
+caption=HTML Ops\-
+method=-
 
 [item20]
 section=commands

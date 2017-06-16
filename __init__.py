@@ -1,4 +1,8 @@
+import os
+import webbrowser
 from cudatext import *
+
+temp_fn = '_cudatext_preview.html'
 
 
 def do_tag_new_or_wrap():
@@ -97,6 +101,33 @@ def do_convert_px_rem():
     msg_status('Converted px<->rem')
 
 
+def do_preview(new_window):
+
+    fn = ed.get_filename()
+    if not fn:
+        msg_box('Cannot preview untitled tab', MB_OK)
+        return
+
+    #if selection- write it to file
+    text = ed.get_text_sel()
+    if text:
+        fn = os.path.join(os.path.dirname(fn), temp_fn)
+        if os.path.isfile(fn):
+            os.remove(fn)
+        with open(fn, 'w') as f:
+            f.write(text)
+
+    if not os.path.isfile(fn):
+        msg_status('Cannot open file: '+fn)
+        return
+
+    if new_window:
+        webbrowser.open(fn)
+    else:
+        webbrowser.open_new_tab(fn)
+    msg_status('Opened preview in browser')
+
+
 class Command:
     def do_b(self):
         do_tag('b')
@@ -112,3 +143,8 @@ class Command:
 
     def convert_px_rem(self):
         do_convert_px_rem()
+
+    def preview_new_tab(self):
+        do_preview(False)
+    def preview_new_window(self):
+        do_preview(True)
