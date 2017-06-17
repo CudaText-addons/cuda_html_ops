@@ -1,5 +1,6 @@
 
 2017.06.17
++ commands to preview in all major browsers [Firefox/Chrome/Safari/Opera/Win-default]
 + function of plugin "HTML Lines To List" moved here
 
 2017.06.17

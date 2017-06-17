@@ -5,41 +5,84 @@ type=cudatext-plugin
 subdir=cuda_html_ops
 homepage=https://github.com/cudatext-addons/cuda_html_ops
 
+;--------------
 [item1]
 section=commands
-caption=HTML Ops\Preview HTML in browser, new tab
-method=preview_new_tab
+caption=HTML Ops\Preview HTML in browser\Default, new tab
+method=preview_tab
 
 [item2]
 section=commands
-caption=HTML Ops\Preview HTML in browser, new window
-method=preview_new_window
+caption=HTML Ops\Preview HTML in browser\Default, new window
+method=preview_window
+
+[item3]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Chrome, new tab
+method=preview_tab_chrome
+
+[item4]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Chrome, new window
+method=preview_window_chrome
+
+[item5]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Firefox, new tab
+method=preview_tab_firefox
+
+[item6]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Firefox, new window
+method=preview_window_firefox
+
+[item7]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Safari, new tab
+method=preview_tab_safari
+
+[item8]
+section=commands
+caption=HTML Ops\Preview HTML in browser\Safari, new window
+method=preview_window_safari
 
 [item9]
 section=commands
-caption=HTML Ops\-
-method=-
+caption=HTML Ops\Preview HTML in browser\Opera, new tab
+method=preview_tab_opera
 
 [item10]
 section=commands
-caption=HTML Ops\Wrap selection in <b>
-method=do_b
+caption=HTML Ops\Preview HTML in browser\Opera, new window
+method=preview_window_opera
 
 [item11]
 section=commands
-caption=HTML Ops\Wrap selection in <i>
-method=do_i
+caption=HTML Ops\Preview HTML in browser\Windows default, new tab
+method=preview_tab_windows
 
 [item12]
 section=commands
-caption=HTML Ops\Wrap selection in <u>
+caption=HTML Ops\Preview HTML in browser\Windows default, new window
+method=preview_window_windows
+
+;--------------
+[item15]
+section=commands
+caption=HTML Ops\Wrap selection in tag\<b>
+method=do_b
+
+[item16]
+section=commands
+caption=HTML Ops\Wrap selection in tag\<i>
+method=do_i
+
+[item17]
+section=commands
+caption=HTML Ops\Wrap selection in tag\<u>
 method=do_u
 
-[item19]
-section=commands
-caption=HTML Ops\-
-method=-
-
+;---------------
 [item20]
 section=commands
 caption=HTML Ops\Add new tag, or wrap selection in tag (Sublime like)

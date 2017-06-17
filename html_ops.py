@@ -59,7 +59,7 @@ def do_tag_wrap_sel(tag):
     msg_status('Added tag <%s>'%tag)
 
 
-def do_preview_browser(new_window):
+def do_preview_browser(app, new_window):
 
     fn = ed.get_filename()
     if not fn:
@@ -80,7 +80,15 @@ def do_preview_browser(new_window):
         return
 
     if new_window:
-        webbrowser.open(fn)
+        if app:
+            webbrowser.get(app).open_new(fn)
+        else:
+            webbrowser.open_new(fn)
     else:
-        webbrowser.open_new_tab(fn)
-    msg_status('Opened preview in browser')
+        if app:
+            webbrowser.get(app).open_new_tab(fn)
+        else:
+            webbrowser.open_new_tab(fn)
+
+    s = ' ('+app+')' if app else ''
+    msg_status('Opened preview in browser'+s)
