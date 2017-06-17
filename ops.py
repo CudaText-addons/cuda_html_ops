@@ -1,9 +1,7 @@
 import os
-import webbrowser
 from cudatext import *
 
 fn_ini = 'cuda_html_ops.ini'
-fn_preview = '_cudatext_preview.html'
 
 
 def do_tag_sublime_action():
@@ -57,38 +55,3 @@ def do_tag_wrap_sel(tag):
     ed.replace(x1, y1, x2, y2, text)
     ed.set_caret(x1, y1, x1+len(text), y1)
     msg_status('Added tag <%s>'%tag)
-
-
-def do_preview_browser(app, new_window):
-
-    fn = ed.get_filename()
-    if not fn:
-        msg_box('Cannot preview untitled tab', MB_OK)
-        return
-
-    #if selection- write it to file
-    text = ed.get_text_sel()
-    if text:
-        fn = os.path.join(os.path.dirname(fn), fn_preview)
-        if os.path.isfile(fn):
-            os.remove(fn)
-        with open(fn, 'w') as f:
-            f.write(text)
-
-    if not os.path.isfile(fn):
-        msg_status('Cannot open file: '+fn)
-        return
-
-    if new_window:
-        if app:
-            webbrowser.get(app).open_new(fn)
-        else:
-            webbrowser.open_new(fn)
-    else:
-        if app:
-            webbrowser.get(app).open_new_tab(fn)
-        else:
-            webbrowser.open_new_tab(fn)
-
-    s = ' ('+app+')' if app else ''
-    msg_status('Opened preview in browser'+s)
