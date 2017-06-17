@@ -2,6 +2,7 @@ from .html_ops import *
 from .conv_units import *
 from .img_insert import *
 from .lines_to_list import *
+from .validator import *
 
 class Command:
     def do_b(self):
@@ -64,3 +65,10 @@ class Command:
         do_list(mode_table1)
     def to_table_cols(self):
         do_list(mode_table2)
+
+    def validate_html5(self):
+        do_validate(ed, 'html5', URL_W3C)
+    def validate_html4_strict(self):
+        do_validate(ed, 'html4', URL_W3C)
+    def validate_html4_tran(self):
+        do_validate(ed, 'html4tr', URL_W3C)

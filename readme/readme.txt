@@ -2,15 +2,14 @@ Plugin for CudaText.
 Gives commands for HTML/CSS work (lexer name can be any).
 
 --------------------------  
-* commands to open current HTML text in current web browser. 
-  2 commands (new tab/ new window) per each major browser (Firefox/Chrome/Safari/Opera/Windows-default).
-  
-  for selection: only selection is previewed, and a temp-file is created (_cudatext_preview.html),
-  in the same folder as original file (temp file must see relative HTML links).
+* commands to open current HTML text in current web browser. 2 commands: open new tab or window.
+  it is the function of plugin HTML Preview. 
+  for selection: only selection previewed, and a temp-file is created, in the same folder as original
+  (_cudatext_preview.html).
 
 --------------------------  
 * commands to wrap selection in HTML style tag: <b>, <i>, <u>.
-  for ex, "text" -->  "<b>text</b>"
+  for ex, "text" ->  "<b>text</b>"
 
 --------------------------  
 * command, to do the same as Sublime Text does on hotkey Alt+Shift+W:
@@ -52,6 +51,13 @@ Gives commands for HTML/CSS work (lexer name can be any).
   - table <table>, arrange cells by lines    
   - table <table>, arrange cells by columns
       
+--------------------------
+* function of plugin "HTML Validator".
+  Items to check current document via online checkers: HTML4/HTML5.
+  Automatic format detection often fails, so you have to manually choose it.
+  It shows results in Validate panel (in the bottom panel), you can double-click result 
+  lines to go to error.
+
 
 Author: Alexey T. (CudaText)
 License: MIT

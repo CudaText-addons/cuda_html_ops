@@ -114,3 +114,19 @@ method=to_table_lines
 section=commands
 caption=HTML Ops\Convert lines to list\To table, by columns
 method=to_table_cols
+
+
+[item61]
+section=commands
+caption=HTML Ops\Online HTML validator\HTML5
+method=validate_html5
+
+[item62]
+section=commands
+caption=HTML Ops\Online HTML validator\HTML4
+method=validate_html4_strict
+
+[item63]
+section=commands
+caption=HTML Ops\Online HTML validator\HTML4 Transitional
+method=validate_html4_tran
