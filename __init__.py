@@ -1,6 +1,7 @@
 from .html_ops import *
 from .conv_units import *
 from .img_insert import *
+from .lines_to_list import *
 
 class Command:
     def do_b(self):
@@ -26,3 +27,12 @@ class Command:
 
     def insert_image_info(self):
         do_insert_image_info()
+
+    def to_list_o(self):
+        do_list(mode_ol)
+    def to_list_u(self):
+        do_list(mode_ul)
+    def to_table_lines(self):
+        do_list(mode_table1)
+    def to_table_cols(self):
+        do_list(mode_table2)

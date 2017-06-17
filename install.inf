@@ -52,5 +52,22 @@ method=convert_px_rem
 
 [item40]
 section=commands
-caption=HTML Ops\Insert <img> tag (or CSS lines) with info about selected picture
+caption=HTML Ops\Insert <img> tag (or css lines) with picture info
 method=insert_image_info
+
+[item51]
+section=commands
+caption=HTML Ops\Convert lines to list\To ordered list
+method=to_list_o
+[item52]
+section=commands
+caption=HTML Ops\Convert lines to list\To unordered list
+method=to_list_u
+[item53]
+section=commands
+caption=HTML Ops\Convert lines to list\To table, by lines
+method=to_table_lines
+[item54]
+section=commands
+caption=HTML Ops\Convert lines to list\To table, by columns
+method=to_table_cols

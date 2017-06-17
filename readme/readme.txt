@@ -2,19 +2,19 @@ Plugin for CudaText.
 Gives commands for HTML/CSS work (lexer name can be any).
 
 --------------------------  
-* commands (new tab/window) to open current HTML text in current web browser. 
+* commands to open current HTML text in current web browser. 2 commands: open new tab or window.
   it is the function of plugin HTML Preview. 
-  for selection: only selection is used, and a temp-file is created, in the same folder as original
+  for selection: only selection previewed, and a temp-file is created, in the same folder as original
   (_cudatext_preview.html).
 
 --------------------------  
 * commands to wrap selection in HTML style tag: <b>, <i>, <u>.
-  for ex, "text" -->  "<b>text</b>"
+  for ex, "text" ->  "<b>text</b>"
 
 --------------------------  
 * command, to do the same as Sublime Text does on hotkey Alt+Shift+W:
 
-  with selection: wrap selection with <p></p> and place 2 selections to rename tag
+  on selection: wrap selection with <p></p> and place 2 selections to rename tag
   w/o selection: add <p></p> with 2 selections and 2 markers:
     1st TAB press goes into tag,
     2nd TAB press goes after tag
@@ -27,7 +27,7 @@ Gives commands for HTML/CSS work (lexer name can be any).
   idea: user "nmsalinas", site: www.nevermindhttp.com
 
 --------------------------  
-* function of plugin "Image Tag".
+* function of plugin "HTML Image Tag".
   Command to choose image file (jpeg, png, gif), and inserts image info into code. 
 
   For CSS lexer (and several CSS based lexers: scss, sass, stylus) it inserts such text:
@@ -44,7 +44,13 @@ Gives commands for HTML/CSS work (lexer name can be any).
   if image file is in the editor file's subfolder.
 
 --------------------------  
-    
+* function of plugin "HTML Lines To List". 
+  commands "Convert lines to list", convert several selected lines to:
+  - ordered list <ol> ... </ol>    
+  - unordered list <ul> ... </ul>
+  - table <table>, arrange cells by lines    
+  - table <table>, arrange cells by columns
+      
 
 Author: Alexey T. (CudaText)
 License: MIT

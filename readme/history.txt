@@ -1,6 +1,9 @@
 
 2017.06.17
-+ function of plugin "HTML Image Tag" moved here
++ function of plugin "HTML Lines To List" moved here
+
+2017.06.17
++ function of plugin "Insert Image Tag" moved here
 + function of plugin "HTML Preview" moved here, as 2 commands
 
 2017.06.06
