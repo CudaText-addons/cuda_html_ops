@@ -2,14 +2,16 @@ Plugin for CudaText.
 Gives commands for HTML/CSS work (lexer name can be any).
 
 --------------------------  
-* commands to open current HTML text in current web browser. 2 commands: open new tab or window.
-  it is the function of plugin HTML Preview. 
-  for selection: only selection previewed, and a temp-file is created, in the same folder as original
-  (_cudatext_preview.html).
+* commands to preview current HTML text in web browser.
+  2 commands (new tab/ new window) for current browser and per each major browser 
+  (Firefox/Chrome/Safari/Opera/Windows-default).
+  
+  for selection, only selection is previewed, and a temp-file is created (_cudatext_preview.html),
+  in the same folder as original file (so temp file can see relative HTML links).
 
 --------------------------  
 * commands to wrap selection in HTML style tag: <b>, <i>, <u>.
-  for ex, "text" ->  "<b>text</b>"
+  e.g., "text" -->  "<b>text</b>"
 
 --------------------------  
 * command, to do the same as Sublime Text does on hotkey Alt+Shift+W:
