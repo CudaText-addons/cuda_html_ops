@@ -1,5 +1,8 @@
 
 2017.06.18
++ commands "wrap in tag" for 25 tags (not only b/i/u)
+
+2017.06.18
 + function of plugin "HTML Validator" moved here
 + commands to preview in all major browsers [Firefox/Chrome/Safari/Opera/Win-default]
 + function of plugin "HTML Lines To List" moved here

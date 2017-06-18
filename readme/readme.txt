@@ -10,8 +10,9 @@ Gives commands for HTML/CSS work (lexer name can be any).
   in the same folder as original file (so temp file can see relative HTML links).
 
 --------------------------  
-* commands to wrap selection in HTML style tag: <b>, <i>, <u>.
-  e.g., "text" -->  "<b>text</b>"
+* commands to wrap selection in HTML tag.
+  commands for about 25 tags.
+  e.g. "text" -->  "<b>text</b>"
 
 --------------------------  
 * command, to do the same as Sublime Text does on hotkey Alt+Shift+W:

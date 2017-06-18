@@ -66,22 +66,6 @@ section=commands
 caption=HTML Ops\Preview HTML in browser\Windows default, new window
 method=preview_window_windows
 
-;--------------
-[item15]
-section=commands
-caption=HTML Ops\Wrap selection in tag\<b>
-method=do_b
-
-[item16]
-section=commands
-caption=HTML Ops\Wrap selection in tag\<i>
-method=do_i
-
-[item17]
-section=commands
-caption=HTML Ops\Wrap selection in tag\<u>
-method=do_u
-
 ;---------------
 [item20]
 section=commands
@@ -130,3 +114,105 @@ method=validate_html4_strict
 section=commands
 caption=HTML Ops\Online HTML validator\HTML4 Transitional
 method=validate_html4_tran
+
+;--------------
+[item100]
+section=commands
+caption=HTML Ops\Wrap in tag\<b>
+method=wrap_b
+[item101]
+section=commands
+caption=HTML Ops\Wrap in tag\<i>
+method=wrap_i
+[item102]
+section=commands
+caption=HTML Ops\Wrap in tag\<u>
+method=wrap_u
+[item103]
+section=commands
+caption=HTML Ops\Wrap in tag\<p>
+method=wrap_p
+[item104]
+section=commands
+caption=HTML Ops\Wrap in tag\<div>
+method=wrap_div
+[item105]
+section=commands
+caption=HTML Ops\Wrap in tag\<span>
+method=wrap_span
+[item106]
+section=commands
+caption=HTML Ops\Wrap in tag\<pre>
+method=wrap_pre
+[item107]
+section=commands
+caption=HTML Ops\Wrap in tag\<strong>
+method=wrap_strong
+[item108]
+section=commands
+caption=HTML Ops\Wrap in tag\<em>
+method=wrap_em
+[item109]
+section=commands
+caption=HTML Ops\Wrap in tag\<ul>
+method=wrap_ul
+[item110]
+section=commands
+caption=HTML Ops\Wrap in tag\<ol>
+method=wrap_ol
+[item111]
+section=commands
+caption=HTML Ops\Wrap in tag\<li>
+method=wrap_li
+[item112]
+section=commands
+caption=HTML Ops\Wrap in tag\<sub>
+method=wrap_sub
+[item113]
+section=commands
+caption=HTML Ops\Wrap in tag\<sup>
+method=wrap_sup
+[item114]
+section=commands
+caption=HTML Ops\Wrap in tag\<small>
+method=wrap_small
+[item115]
+section=commands
+caption=HTML Ops\Wrap in tag\<bdi>
+method=wrap_bdi
+[item116]
+section=commands
+caption=HTML Ops\Wrap in tag\<h1>
+method=wrap_h1
+[item117]
+section=commands
+caption=HTML Ops\Wrap in tag\<h2>
+method=wrap_h2
+[item118]
+section=commands
+caption=HTML Ops\Wrap in tag\<h3>
+method=wrap_h3
+[item119]
+section=commands
+caption=HTML Ops\Wrap in tag\<h4>
+method=wrap_h4
+[item120]
+section=commands
+caption=HTML Ops\Wrap in tag\<h5>
+method=wrap_h5
+[item121]
+section=commands
+caption=HTML Ops\Wrap in tag\<h6>
+method=wrap_h6
+[item122]
+section=commands
+caption=HTML Ops\Wrap in tag\<blockquote>
+method=wrap_blockquote
+[item123]
+section=commands
+caption=HTML Ops\Wrap in tag\<q>
+method=wrap_q
+[item124]
+section=commands
+caption=HTML Ops\Wrap in tag\<cite>
+method=wrap_cite

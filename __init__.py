@@ -6,14 +6,32 @@ from .lines_to_list import *
 from .validator import *
 
 class Command:
-    def do_b(self):
-        do_tag_wrap_sel('b')
 
-    def do_i(self):
-        do_tag_wrap_sel('i')
-
-    def do_u(self):
-        do_tag_wrap_sel('u')
+    def wrap_b(self):              do_tag_wrap_sel('b')
+    def wrap_i(self):              do_tag_wrap_sel('i')
+    def wrap_u(self):              do_tag_wrap_sel('u')
+    def wrap_p(self):              do_tag_wrap_sel('p')
+    def wrap_div(self):            do_tag_wrap_sel('div')
+    def wrap_span(self):           do_tag_wrap_sel('span')
+    def wrap_pre(self):            do_tag_wrap_sel('pre')
+    def wrap_strong(self):         do_tag_wrap_sel('strong')
+    def wrap_em(self):             do_tag_wrap_sel('em')
+    def wrap_ul(self):             do_tag_wrap_sel('ul')
+    def wrap_ol(self):             do_tag_wrap_sel('ol')
+    def wrap_li(self):             do_tag_wrap_sel('li')
+    def wrap_sub(self):            do_tag_wrap_sel('sub')
+    def wrap_sup(self):            do_tag_wrap_sel('sup')
+    def wrap_small(self):          do_tag_wrap_sel('small')
+    def wrap_bdi(self):            do_tag_wrap_sel('bdi')
+    def wrap_h1(self):             do_tag_wrap_sel('h1')
+    def wrap_h2(self):             do_tag_wrap_sel('h2')
+    def wrap_h3(self):             do_tag_wrap_sel('h3')
+    def wrap_h4(self):             do_tag_wrap_sel('h4')
+    def wrap_h5(self):             do_tag_wrap_sel('h5')
+    def wrap_h6(self):             do_tag_wrap_sel('h6')
+    def wrap_blockquote(self):     do_tag_wrap_sel('blockquote')
+    def wrap_q(self):              do_tag_wrap_sel('q')
+    def wrap_cite(self):           do_tag_wrap_sel('cite')
 
     def tag_new_or_wrap(self):
         do_tag_sublime_action()
