@@ -61,6 +61,13 @@ Gives commands for HTML/CSS work (lexer name can be any).
   It shows results in Validate panel (in the bottom panel), you can double-click result 
   lines to go to error.
 
+--------------------------
+* function of plugin "Increment".
+  2 commands to increase/decrease number under caret. 
+  Numbers in CSS/HTML supported: 100px, 1.200em. 
+  Float numbers supported (dot must be used).
+  Multi-carets supported: all numbers for all carets affected.
+
 
 Author: Alexey T. (CudaText)
 License: MIT

@@ -4,6 +4,7 @@ from .conv_units import *
 from .img_insert import *
 from .lines_to_list import *
 from .validator import *
+from .increment import do_increment
 
 class Command:
 
@@ -65,3 +66,6 @@ class Command:
     def validate_html5(self):          do_validate(ed, 'html5', URL_W3C)
     def validate_html4_strict(self):   do_validate(ed, 'html4', URL_W3C)
     def validate_html4_tran(self):     do_validate(ed, 'html4tr', URL_W3C)
+
+    def increment(self): do_increment(True)
+    def decrement(self): do_increment(False)

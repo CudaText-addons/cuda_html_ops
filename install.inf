@@ -216,3 +216,19 @@ method=wrap_q
 section=commands
 caption=HTML Ops\Wrap in tag\<cite>
 method=wrap_cite
+
+
+[item250]
+section=commands
+caption=HTML Ops\-
+method=-
+
+[item251]
+section=commands
+caption=HTML Ops\Increase value
+method=increment
+
+[item252]
+section=commands
+caption=HTML Ops\Decrease value
+method=decrement

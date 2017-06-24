@@ -1,4 +1,7 @@
 
+2017.06.24
++ functions of plugin "Increment" moved here
+
 2017.06.18
 + commands "wrap in tag" for 25 tags (not only b/i/u)
 
