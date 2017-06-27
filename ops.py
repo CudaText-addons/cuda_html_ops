@@ -87,16 +87,22 @@ def handle_on_key(ed, key, state):
     indent = s[:x].rfind('<')
     if indent<0: return
 
+    space = 0
+    for i in range(indent):
+        if not s[i] in ' \t': break
+        space += 1
+
     text_len = s[x:].find('<')
     if text_len<0: return
 
     is_closing = s[indent+1]=='/'
     if is_closing: return
 
-    text = '\n' + ' '*indent
+    #handle tabs at linestart
+    text = '\n' + s[:space] + ' '*(indent-space)
     ed.insert(x+text_len, y, text)
 
-    text = '\n' + ' '*(indent+HTML_INDENT)
+    text += ' '*HTML_INDENT
     ed.insert(x, y, text)
     ed.set_caret(indent+HTML_INDENT, y+1)
 
