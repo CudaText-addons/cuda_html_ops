@@ -238,3 +238,4 @@ method=decrement
 section=events
 events=on_key
 lexers=$html
+keys=13

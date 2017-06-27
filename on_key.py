@@ -16,6 +16,8 @@ def handle_on_key(ed, key, state):
       |Top
     </a>
     """
+    #print('key', key)
+
     #Enter is 13
     if (state!='') or (key!=13): return
 
