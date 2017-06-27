@@ -72,11 +72,17 @@ Gives commands for HTML/CSS work (lexer name can be any).
 * event for HTML lexers (any lexer name with "HTML" word):
   Enter key press between opening/closing tag, makes smart indent:
 
-  <tag>|</tag>
-  after Enter converts to
-  <tag>
-    |
-  </tag>
+    <tag>|</tag>
+    converts to
+    <tag>
+      |
+    </tag>
+  
+    <a href="#GlossTop">|Top</a>
+    converts to
+    <a href="#GlossTop">
+      |Top
+    </a>
   
 
 Author: Alexey T. (CudaText)

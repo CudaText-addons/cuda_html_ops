@@ -65,6 +65,11 @@ def handle_on_key(ed, key, state):
     <tag>
       |
     </tag>
+
+    <a href="#GlossTop">|Top</a> must convert to
+    <a href="#GlossTop">
+      |Top
+    </a>
     """
     #Enter is 13
     if (state!='') or (key!=13): return
@@ -77,14 +82,23 @@ def handle_on_key(ed, key, state):
 
     s = ed.get_text_line(y)
     if not 3<=x<len(s)-1: return
-    if (s[x-1]!='>') or (s[x]!='<'): return
+    if (s[x-1]!='>'): return
 
     indent = s[:x].rfind('<')
     if indent<0: return
 
-    text = '\n' + ' '*(indent+HTML_INDENT) + '\n' + ' '*indent
+    text_len = s[x:].find('<')
+    if text_len<0: return
+
+    is_closing = s[indent+1]=='/'
+    if is_closing: return
+
+    text = '\n' + ' '*indent
+    ed.insert(x+text_len, y, text)
+
+    text = '\n' + ' '*(indent+HTML_INDENT)
     ed.insert(x, y, text)
     ed.set_caret(indent+HTML_INDENT, y+1)
 
-    msg_status('HTML indent added')
+    msg_status('Smart HTML indent')
     return False #block Enter
