@@ -69,3 +69,6 @@ class Command:
 
     def increment(self): do_increment(True)
     def decrement(self): do_increment(False)
+
+    def on_key(self, ed_self, key, state):
+        return handle_on_key(ed_self, key, state)

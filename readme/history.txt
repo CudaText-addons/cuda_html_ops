@@ -1,4 +1,11 @@
 
+2017.06.27
++ for HTML lexers, added smart indent on Enter, between tags:
+  <tag>|</tag> converts to
+  <tag>
+    |
+  </tag>
+
 2017.06.24
 + functions of plugin "Increment" moved here
 

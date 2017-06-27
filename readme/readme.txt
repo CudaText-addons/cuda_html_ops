@@ -68,6 +68,16 @@ Gives commands for HTML/CSS work (lexer name can be any).
   Float numbers supported (dot must be used).
   Multi-carets supported: all numbers for all carets affected.
 
+--------------------------
+* event for HTML lexers (any lexer name with "HTML" word):
+  Enter key press between opening/closing tag, makes smart indent:
+
+  <tag>|</tag>
+  after Enter converts to
+  <tag>
+    |
+  </tag>
+  
 
 Author: Alexey T. (CudaText)
 License: MIT

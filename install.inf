@@ -4,6 +4,7 @@ desc=Commands to work with HTML/CSS
 type=cudatext-plugin
 subdir=cuda_html_ops
 homepage=https://github.com/cudatext-addons/cuda_html_ops
+$html=regex:.*HTML.*
 
 ;--------------
 [item1]
@@ -232,3 +233,8 @@ method=increment
 section=commands
 caption=HTML Ops\Decrease value
 method=decrement
+
+[item400]
+section=events
+events=on_key
+lexers=$html

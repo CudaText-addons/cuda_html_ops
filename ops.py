@@ -2,6 +2,7 @@ import os
 from cudatext import *
 
 fn_ini = 'cuda_html_ops.ini'
+HTML_INDENT = 2 #2 spaces indent on Enter
 
 
 def do_tag_sublime_action():
@@ -55,3 +56,35 @@ def do_tag_wrap_sel(tag):
     ed.replace(x1, y1, x2, y2, text)
     ed.set_caret(x1, y1, x1+len(text), y1)
     msg_status('Added tag <%s>'%tag)
+
+
+def handle_on_key(ed, key, state):
+    """
+    Handle Enter between tags, and make HTML indent:
+    <tag>|</tag> must convert to
+    <tag>
+      |
+    </tag>
+    """
+    #Enter is 13
+    if (state!='') or (key!=13): return
+
+    carets = ed.get_carets()
+    if len(carets)>1: return #dont work on mul-carets
+
+    x, y, x1, y1 = carets[0]
+    if x1>=0 or y1>=0: return #dont work on selection
+
+    s = ed.get_text_line(y)
+    if not 3<=x<len(s)-1: return
+    if (s[x-1]!='>') or (s[x]!='<'): return
+
+    indent = s[:x].rfind('<')
+    if indent<0: return
+
+    text = '\n' + ' '*(indent+HTML_INDENT) + '\n' + ' '*indent
+    ed.insert(x, y, text)
+    ed.set_caret(indent+HTML_INDENT, y+1)
+
+    msg_status('HTML indent added')
+    return False #block Enter
