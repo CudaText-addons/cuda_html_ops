@@ -5,6 +5,7 @@ from .img_insert import *
 from .lines_to_list import *
 from .validator import *
 from .increment import do_increment
+from .on_key import *
 
 class Command:
 
