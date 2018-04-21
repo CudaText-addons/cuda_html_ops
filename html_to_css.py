@@ -19,9 +19,8 @@ def do_html_to_css_clipboard(compact):
         return
 
     text_in = '  ' if compact else '\n\n'
-    out = ['/* CSS styles */', ''] + \
-          ['.'+name+' {'+text_in+'}\n' for name in res]
-
-    text = '\n'.join(out)
+    out = ['.'+name+' {'+text_in+'}\n' for name in res]
+    text = '\n'.join(out)+'\n'
+    
     app_proc(PROC_SET_CLIP, text)
     msg_status('CSS styles ({}) copied to clipboard'.format(len(res)) )
