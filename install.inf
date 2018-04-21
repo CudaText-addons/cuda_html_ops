@@ -73,6 +73,16 @@ section=commands
 caption=HTML Ops\Add new tag, or wrap selection in tag (Sublime like)
 method=tag_new_or_wrap
 
+[item25]
+section=commands
+caption=HTML Ops\HTML selection to CSS classes, copy to clipboard
+method=to_css_classes
+
+[item26]
+section=commands
+caption=HTML Ops\HTML selection to CSS classes, copy to clipboard, compact
+method=to_css_classes_compact
+
 [item30]
 section=commands
 caption=HTML Ops\Convert selection px<->rem

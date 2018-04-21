@@ -6,6 +6,7 @@ from .lines_to_list import *
 from .validator import *
 from .increment import do_increment
 from .on_key import *
+from .html_to_css import *
 
 class Command:
 
@@ -73,3 +74,6 @@ class Command:
 
     def on_key(self, ed_self, key, state):
         return handle_on_key(ed_self, key, state)
+
+    def to_css_classes(self):         do_html_to_css_clipboard(False)
+    def to_css_classes_compact(self): do_html_to_css_clipboard(True)
