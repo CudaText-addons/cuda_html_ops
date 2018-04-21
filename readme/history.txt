@@ -1,4 +1,7 @@
 
+2018.04.21
++ add: commands: "HTML selection to CSS classes, copy to clipboard (, compact)"
+
 2017.06.27
 + for HTML lexers, added smart indent on Enter; see description in readme.txt
 
