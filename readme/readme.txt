@@ -23,8 +23,14 @@ Gives commands for HTML/CSS work (lexer name can be any).
     2nd TAB press goes after tag
 
 --------------------------
-* commands "HTML selection to CSS classes":
-  finds fragments "class='name'" in selected block, and generate list (sorted) of CSS classes from this block. resulting list is copied to clipboard. to paste it to CSS file.
+* command "HTML selection to CSS classes":
+  finds fragments 'class="name"' in selected block, and generate list (sorted) of CSS classes from this block. resulting list is copied to clipboard, to paste to CSS file. example of result:
+
+.first {  }
+
+.somemore {  }
+
+.another {  }
 
 --------------------------  
 * command, which converts selected value between "px" and "rem" units.
