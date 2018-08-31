@@ -1,4 +1,7 @@
 
+2018.08.31
+- avoid deprecated API
+
 2018.04.21
 + add: commands: "HTML selection to CSS classes, copy to clipboard (, compact)"
 

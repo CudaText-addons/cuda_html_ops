@@ -9,8 +9,8 @@ URL_W3C = 'http://validator.w3.org/check'
 
 def do_validate(ed, format, validator_url):
 
-    app_log(LOG_SET_PANEL, LOG_PANEL_VALIDATE)
-    app_log(LOG_CLEAR, '')
+    p = LOG_PANEL_VALIDATE
+    app_log(LOG_CLEAR, '', panel=p)
 
     text = ed.get_text_all()
     params = {'fragment': text, 'parser': format, 'output': 'json'}
@@ -24,16 +24,16 @@ def do_validate(ed, format, validator_url):
         msg_box('Document successfully checked as %s' % format, MB_OK+MB_ICONINFO)
         return
 
-    app_log(LOG_SET_REGEX, r'Line (\d+):.+')
-    app_log(LOG_SET_LINE_ID, '1')
-    app_log(LOG_SET_NAME_ID, '0')
-    app_log(LOG_SET_FILENAME, ed.get_filename())
-    app_log(LOG_SET_ZEROBASE, '0')
+    app_log(LOG_SET_REGEX, r'Line (\d+):.+', panel=p)
+    app_log(LOG_SET_LINE_ID, '1', panel=p)
+    app_log(LOG_SET_NAME_ID, '0', panel=p)
+    app_log(LOG_SET_FILENAME, ed.get_filename(), panel=p)
+    app_log(LOG_SET_ZEROBASE, '0', panel=p)
 
-    app_log(LOG_ADD, 'Errors found while checking document as %s:' % format)
-    app_log(LOG_ADD, '')
+    app_log(LOG_ADD, 'Errors found while checking document as %s:' % format, panel=p)
+    app_log(LOG_ADD, '', panel=p)
     for message in results['messages']:
-        app_log(LOG_ADD, 'Line %s: %s' % (message['lastLine'], message['message']))
+        app_log(LOG_ADD, 'Line %s: %s' % (message['lastLine'], message['message']), panel=p)
 
     ed.focus()
     ed.cmd(cmd_ShowPanelValidate)
