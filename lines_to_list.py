@@ -54,7 +54,7 @@ def do_list(mode):
         msg_status('Text not selected')
         return
 
-    eol = '\n' #ed.get_prop(PROP_EOL)
+    eol = '\n'
     indent = '  ' #'\t' if not ed.get_prop(PROP_TAB_SPACES) else ' '*ed.get_prop(PROP_TAB_SIZE)
 
     n1, n2 = ed.get_sel_lines()
@@ -71,5 +71,4 @@ def do_list(mode):
     text = eol.join(l_out) + eol
 
     ed.set_caret(0, n1)
-    ed.delete(0, n1, 0, n2+1)
-    ed.insert(0, n1, text)
+    ed.replace_lines(n1, n2, l_out)
