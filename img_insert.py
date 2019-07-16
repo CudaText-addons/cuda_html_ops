@@ -10,7 +10,7 @@ ini_keydir = 'dir'
 
 def get_text(fn, sizex, sizey):
     lex = ed.get_prop(PROP_LEXER_CARET)
-    eol = ed.get_prop(PROP_EOL)
+    eol = '\n'
     indent_size = ed.get_prop(PROP_TAB_SIZE)
     indent_sp = ed.get_prop(PROP_TAB_SPACES)
     indent = ' '*indent_size if indent_sp else '\t'
