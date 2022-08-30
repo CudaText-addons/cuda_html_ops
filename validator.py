@@ -5,7 +5,7 @@ import json
 from urllib.request import urlopen
 from urllib.parse import urlencode
 
-URL_W3C = 'http://validator.w3.org/check'
+URL_W3C = 'https://validator.w3.org/check'
 
 def do_validate(ed, format, validator_url):
 
@@ -21,6 +21,9 @@ def do_validate(ed, format, validator_url):
     if not output:
         msg_status('Cannot open validator URL')
         return
+
+    #with open('/home/user/er.html', 'w') as f:
+        #f.write(output)
 
     try:
         results = json.loads(output)
