@@ -18,7 +18,15 @@ def do_validate(ed, format, validator_url):
 
     output = urlopen(validator_url, encoded_params).read()
     output = output.decode('utf-8')
-    results = json.loads(output)
+    if not output:
+        msg_status('Cannot open validator URL')
+        return
+
+    try:
+        results = json.loads(output)
+    except:
+        msg_status('Cannot parse validator reply')
+        return
 
     if not results['messages']:
         msg_box('Document successfully checked as %s' % format, MB_OK+MB_ICONINFO)
