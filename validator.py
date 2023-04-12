@@ -2,10 +2,10 @@ from cudatext import *
 from cudatext_cmd import *
 import sys
 import json
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 
-URL_W3C = 'https://validator.w3.org/check'
+URL_W3C = 'https://validator.w3.org/nu/?out=json'
 
 def do_validate(ed, format, validator_url):
 
@@ -13,10 +13,14 @@ def do_validate(ed, format, validator_url):
     app_log(LOG_CLEAR, '', panel=p)
 
     text = ed.get_text_all()
-    params = {'fragment': text, 'parser': format, 'output': 'json'}
-    encoded_params = urlencode(params).encode('utf-8')
-
-    output = urlopen(validator_url, encoded_params).read()
+    req = Request(
+        validator_url,
+        data=text.encode('utf-8'),
+        method='POST',
+        headers={'Content-type': 'text/html; charset=utf-8'}
+    )
+    output = urlopen(req).read()
+    
     output = output.decode('utf-8')
     if not output:
         msg_status('Cannot open validator URL')
