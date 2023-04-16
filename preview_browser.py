@@ -2,12 +2,16 @@ import os
 import webbrowser
 from cudatext import *
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
+
 def do_preview_browser(app, new_window):
 
     fn_preview = '_cudatext_preview.html'
     fn = ed.get_filename()
     if not fn:
-        msg_box('Cannot preview untitled tab', MB_OK)
+        msg_box(_('Cannot preview untitled tab'), MB_OK)
         return
 
     #if selection- write it to file
@@ -20,7 +24,7 @@ def do_preview_browser(app, new_window):
             f.write(text)
 
     if not os.path.isfile(fn):
-        msg_status('Cannot open file: '+fn)
+        msg_status(_('Cannot open file: ')+fn)
         return
 
     if new_window:

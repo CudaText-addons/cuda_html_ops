@@ -1,5 +1,9 @@
 from cudatext import *
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
+
 def _convert_px_rem(s):
     s = s.lower()
     if "rem" in s:
@@ -22,12 +26,12 @@ def do_convert_px_rem():
     if not s: return
 
     if '\n' in s or ' ' in s:
-        msg_status('Cannot convert selection')
+        msg_status(_('Cannot convert selection'))
         return
 
     carets = ed.get_carets()
     if len(carets)>1:
-        msg_status('Need single caret')
+        msg_status(_('Need single caret'))
         return
 
     x1, y1, x2, y2 = carets[0]
@@ -39,4 +43,4 @@ def do_convert_px_rem():
 
     ed.replace(x1, y1, x2, y2, s)
     ed.set_caret(x1+len(s), y1, x1, y1)
-    msg_status('Converted px<->rem')
+    msg_status(_('Converted px<->rem'))

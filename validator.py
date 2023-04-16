@@ -5,6 +5,9 @@ import json
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
 URL_W3C = 'https://validator.w3.org/nu/?out=json'
 
 def do_validate(ed, format, validator_url):
@@ -23,7 +26,7 @@ def do_validate(ed, format, validator_url):
     
     output = output.decode('utf-8')
     if not output:
-        msg_status('Cannot open validator URL')
+        msg_status(_('Cannot open validator URL'))
         return
 
     #with open('/home/user/er.html', 'w') as f:
@@ -32,11 +35,11 @@ def do_validate(ed, format, validator_url):
     try:
         results = json.loads(output)
     except:
-        msg_status('Cannot parse validator reply')
+        msg_status(_('Cannot parse validator reply'))
         return
 
     if not results['messages']:
-        msg_box('Document successfully checked as %s' % format, MB_OK+MB_ICONINFO)
+        msg_box(_('Document successfully checked as %s') % format, MB_OK+MB_ICONINFO)
         return
 
     app_log(LOG_SET_REGEX, r'Line (\d+):.+', panel=p)

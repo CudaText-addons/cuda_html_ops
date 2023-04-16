@@ -1,6 +1,9 @@
 import re
 from cudatext import *
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
 REGEX1 = r'\bclass\s*=\s*"(.+?)"'
 REGEX2 = r"\bclass\s*=\s*'(.+?)'"
 
@@ -13,7 +16,7 @@ def do_html_to_css_clipboard(compact):
     res = sorted(list(set(res)))
 
     if not res:
-        msg_status('No CSS classes found')
+        msg_status(_('No CSS classes found'))
         app_proc(PROC_SET_CLIP, '')
         return
 
@@ -22,4 +25,4 @@ def do_html_to_css_clipboard(compact):
     text = '\n'.join(out)+'\n'
 
     app_proc(PROC_SET_CLIP, text)
-    msg_status('CSS styles ({}) copied to clipboard'.format(len(res)) )
+    msg_status(_('CSS styles ({}) copied to clipboard').format(len(res)) )

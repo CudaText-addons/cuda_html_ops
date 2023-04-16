@@ -1,5 +1,8 @@
 from cudatext import *
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
 HTML_INDENT = 2 #two spaces
 
 
@@ -53,5 +56,5 @@ def handle_on_key(ed, key, state):
     ed.insert(x, y, text)
     ed.set_caret(indent+HTML_INDENT, y+1)
 
-    msg_status('Smart HTML indent')
+    msg_status(_('Smart HTML indent'))
     return False #block Enter

@@ -2,8 +2,11 @@ import os
 from cudatext import *
 from .imgsize import get_image_size
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
 css_names = ('CSS', 'SCSS', 'SASS', 'Sass', 'Stylus')
-_filter = 'Images (jpeg, png, gif)|*.jpg;*.jpeg;*.png;*.gif|'
+_filter = _('Images') + ' (jpeg, png, gif)|*.jpg;*.jpeg;*.png;*.gif|'
 ini_fn = 'cuda_html_ops.ini'
 ini_section = 'op'
 ini_keydir = 'dir'
@@ -50,7 +53,7 @@ def do_insert_image_info():
     if not fn: return
     dim = get_image_size(fn)
     if dim is None:
-        msg_box('Cannot detect image file:\n%s' % fn, MB_OK+MB_ICONWARNING)
+        msg_box(_('Cannot detect image file:\n%s') % fn, MB_OK+MB_ICONWARNING)
         return
 
     x, y = dim
@@ -63,4 +66,4 @@ def do_insert_image_info():
     x0, y0, x1, y1 = ed.get_carets()[0]
     ed.insert(x0, y0, text)
     ed.set_caret(x0+npos, y0)
-    msg_status('Image info inserted')
+    msg_status(_('Image info inserted'))

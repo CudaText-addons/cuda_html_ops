@@ -1,6 +1,9 @@
 from cudatext import *
 import html
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
 max_columns = 100
 mode_ol = 1
 mode_ul = 2
@@ -11,15 +14,15 @@ def esc(s):
     return html.escape(s, False)
 
 def get_columns():
-    s = dlg_input('Table columns:', '3')
+    s = dlg_input(_('Table columns:'), '3')
     if not s: return
     try:
         n = int(s)
     except:
-        msg_status('Incorrect number: '+s)
+        msg_status(_('Incorrect number: ')+s)
         return
     if not 1<=n<=max_columns:
-        msg_status('Incorrect number: '+s)
+        msg_status(_('Incorrect number: ')+s)
         return
     return n
 
@@ -51,7 +54,7 @@ def do_table_lines(l, n_cols, indent, by_lines):
 def do_list(mode):
     text = ed.get_text_sel()
     if not text:
-        msg_status('Text not selected')
+        msg_status(_('Text not selected'))
         return
 
     eol = '\n'

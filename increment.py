@@ -1,6 +1,10 @@
 from cudatext import *
 from decimal import Decimal as D
 
+from cudax_lib import get_translation
+_ = get_translation(__file__)  # I18N
+
+
 def get_result(text, is_inc):
     try:
         num = int(text)
@@ -49,7 +53,7 @@ def get_text(x0, y0):
 def do_increment(is_inc):
     carets = ed.get_carets()
     if not carets:
-        msg_status('No carets')
+        msg_status(_('No carets'))
         return
     run_carets(is_inc, carets)
 
@@ -66,22 +70,22 @@ def run_carets(is_inc, carets):
     ed.unlock()
 
     if not is_simple:
-        msg_status('Changed %d values' % len(carets))
+        msg_status(_('Changed %d values') % len(carets))
 
 
 def run_simple(is_inc, x0, y0, is_simple):
     info = get_text(x0, y0)
     if not info:
-        return 'Place caret under number'
+        return _('Place caret under number')
     text, x1, y1 = info
     res = get_result(text, is_inc)
     if res is None:
-        return 'Incorrect number or zero: '+text
+        return _('Incorrect number or zero: ')+text
 
     if is_simple:
         if len(res) < len(text):
             ed.set_caret(x1, y1)
     ed.delete(x1, y1, x1+len(text), y1)
     ed.insert(x1, y1, res)
-    return 'Increased value' if is_inc else 'Decreased value'
+    return _('Increased value') if is_inc else _('Decreased value')
 

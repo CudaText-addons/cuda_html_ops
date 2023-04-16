@@ -1,3 +1,6 @@
+2023.04.16
++ add: support for i18n (patch by Markus F.)
+
 2023.04.12
 - fix: adapt to changed online validator URL (by @veksha)
 * change: removed commands to call HTML _4_ validators
