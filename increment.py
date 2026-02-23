@@ -62,12 +62,12 @@ def run_carets(is_inc, carets):
     is_simple = len(carets)==1
     carets = list(reversed(carets))
 
-    ed.lock()
+    ed.action(EDACTION_LOCK)
     for caret in carets:
         res = run_simple(is_inc, caret[0], caret[1], is_simple)
         if is_simple:
             msg_status(res)
-    ed.unlock()
+    ed.action(EDACTION_UNLOCK)
 
     if not is_simple:
         msg_status(_('Changed %d values') % len(carets))
