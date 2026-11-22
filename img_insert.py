@@ -39,7 +39,7 @@ def get_text(fn, sizex, sizey):
     else:
         return '<img src="%s" width="%d" height="%d" alt="untitled" />' % (fn, sizex, sizey)
 
-def get_filename():
+def _get_filename():
     folder = ini_read(ini_fn, ini_section, ini_keydir, '')
     fn = dlg_file(True, '', folder, _filter)
     if fn:
@@ -49,7 +49,7 @@ def get_filename():
 
 def do_insert_image_info():
 
-    fn = get_filename()
+    fn = _get_filename()
     if not fn: return
     dim = get_image_size(fn)
     if dim is None:
