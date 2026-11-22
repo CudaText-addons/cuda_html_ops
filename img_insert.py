@@ -19,7 +19,7 @@ def get_text(fn, sizex, sizey):
     indent = ' '*indent_size if indent_sp else '\t'
 
     #consider image is in file's subfolder
-    ed_fn = ed.get_filename()
+    ed_fn = ed.get_prop(PROP_FN, '')
     if ed_fn:
         path = os.path.dirname(ed_fn) + os.sep
         if fn.startswith(path):

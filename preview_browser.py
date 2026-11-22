@@ -9,7 +9,7 @@ _ = get_translation(__file__)  # I18N
 def do_preview_browser(app, new_window):
 
     fn_preview = '_cudatext_preview.html'
-    fn = ed.get_filename()
+    fn = ed.get_prop(PROP_FN, '')
     if not fn:
         msg_box(_('Cannot preview untitled tab'), MB_OK)
         return

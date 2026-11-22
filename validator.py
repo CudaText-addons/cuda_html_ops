@@ -45,7 +45,7 @@ def do_validate(ed, format, validator_url):
     app_log(LOG_SET_REGEX, r'Line (\d+):.+', panel=p)
     app_log(LOG_SET_LINE_ID, '1', panel=p)
     app_log(LOG_SET_NAME_ID, '0', panel=p)
-    app_log(LOG_SET_FILENAME, ed.get_filename(), panel=p)
+    app_log(LOG_SET_FILENAME, ed.get_prop(PROP_FN, ''), panel=p)
     app_log(LOG_SET_ZEROBASE, '0', panel=p)
 
     app_log(LOG_ADD, 'Errors found while checking document as %s:' % format, panel=p)

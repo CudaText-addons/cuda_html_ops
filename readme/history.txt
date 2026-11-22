@@ -1,5 +1,8 @@
+2026.11.21
+- fix: avoid deprecated API: get_filename
+
 2026.02.23
-- fix: avoid deprecated API ed.lock
+- fix: avoid deprecated API: ed.lock
 
 2023.04.16
 + add: support for i18n (patch by Markus F.)
